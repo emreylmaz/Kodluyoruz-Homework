@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px 10px 35px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  background: #276678;
+  color: #fff;
+  text-decoration: line-through;
+
+  border-bottom: 1px solid rgba(192, 192, 192, 0.537);
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 16px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.header {
+  background: rgb(247, 132, 1);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 360px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
